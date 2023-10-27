@@ -1,5 +1,131 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+
+class QuizQuestion {
+  final String question;
+  final List<String> options;
+  final int correctAnswer;
+
+  QuizQuestion(this.question, this.options, this.correctAnswer);
+}
+
+class VideoDemo extends StatefulWidget {
+  VideoDemo() : super();
+
+  final String title = "Video Demo";
+
+  @override
+  VideoDemoState createState() => VideoDemoState();
+}
+
+class VideoDemoState extends State<VideoDemo> {
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+  final quizQuestions = [
+    QuizQuestion(
+      "What is Flutter?",
+      ["A mobile development framework", "A music band", "A type of bird"],
+      0,
+    ),
+    QuizQuestion(
+      "Which programming language is used in Flutter?",
+      ["Dart", "Java", "Python"],
+      0,
+    ),
+  ];
+
+  @override
+  void initState() {
+    _controller = VideoPlayerController.asset("lib/media/1.mp4");
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Video Demo"),
+      ),
+      body: Column(
+        children: [
+          AspectRatio(
+            aspectRatio: _controller.value.aspectRatio,
+            child: VideoPlayer(_controller),
+          ),
+          Expanded(
+            child: QuizScreen(quizQuestions),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            if (_controller.value.isPlaying) {
+              _controller.pause();
+            } else {
+              _controller.play();
+            }
+          });
+        },
+        child: Icon(
+          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+        ),
+      ),
+    );
+  }
+}
+
+class QuizScreen extends StatelessWidget {
+  final List<QuizQuestion> questions;
+
+  QuizScreen(this.questions);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: questions.length,
+      itemBuilder: (context, index) {
+        return Column(
+          children: [
+            Text(questions[index].question),
+            Column(
+              children: questions[index].options.map((option) {
+                return RadioListTile<int>(
+                  title: Text(option),
+                  value: questions[index].options.indexOf(option),
+                  groupValue: -1,
+                  onChanged: (value) {
+                    if (value == questions[index].correctAnswer) {
+                      // User selected the correct answer
+                    } else {
+                      // User selected the wrong answer
+                    }
+                  },
+                );
+              }).toList(),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+
+
+/*
+import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+
  
 class VideoDemo extends StatefulWidget {
   VideoDemo() : super();
@@ -54,86 +180,7 @@ class VideoDemoState extends State<VideoDemo> {
           }
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            if (_controller.value.isPlaying) {
-              _controller.pause();
-            } else {
-              _controller.play();
-            }
-          });
-        },
-        child:
-            Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
-      ),
     );
-  }
-}
-/*
-import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
-
-class VideoPlayerWidget extends StatefulWidget {
-  const VideoPlayerWidget({super.key});
-
-  @override
-  _VideoPlayerWidgetState createState() => _VideoPlayerWidgetState();
-}
-
-class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
-  // Create the videoPlayerController
-  late VideoPlayerController _videoPlayerController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    // Initialize the controller and store the Future for later use.
-    _videoPlayerController = VideoPlayerController.network(
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
-    )..initialize().then((_) {
-      setState(() {});
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Video Simple"),
-      ),
-      body: Center(
-        child: _videoPlayerController.value.isInitialized
-            ? AspectRatio(
-                aspectRatio: _videoPlayerController.value.aspectRatio,
-                child: VideoPlayer(_videoPlayerController),
-              ) // Show if the videoPlayerController is initialized
-            : CircularProgressIndicator(), // Display a loading indicator while initializing
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            if (_videoPlayerController.value.isPlaying) {
-              _videoPlayerController.pause();
-            } else {
-              _videoPlayerController.play();
-            }
-          });
-        },
-        child: Icon(
-          _videoPlayerController.value.isPlaying
-              ? Icons.pause
-              : Icons.play_arrow,
-        ),
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _videoPlayerController.dispose();
   }
 }
 */
