@@ -1,4 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:interface_number_3/video_screen.dart';
+
+class VideoPlayerScreen extends StatelessWidget {
+  const VideoPlayerScreen({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+ 
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('YouTube Video Player'),
+      ),
+      body: const Center(
+        child: 
+          VideoPlayerWidget(videoUrl: 'https://www.youtube.com/watch?v=n1Y4HROvFME',
+        )
+      ),
+    );
+  }
+}
+
+
+/*
+import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoTuto extends StatefulWidget {
@@ -60,3 +85,4 @@ class _VideoTutoState extends State<VideoTuto> {
     _controller.dispose();
   }
 }
+*/
