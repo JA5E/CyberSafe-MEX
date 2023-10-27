@@ -1,26 +1,26 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:interface_number_3/video_screen.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoPlayerScreen extends StatelessWidget {
-  const VideoPlayerScreen({super.key});
-
 
   @override
   Widget build(BuildContext context) {
- 
+    // Replace 'YOUR_VIDEO_ID' with the actual YouTube video ID
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('YouTube Video Player'),
       ),
       body: const Center(
         child: 
-          VideoPlayerWidget(videoUrl: 'https://www.youtube.com/watch?v=n1Y4HROvFME',
-        )
+        YoutubeScreen(url_video: 'https://www.youtube.com/watch?v=n1Y4HROvFME')
       ),
     );
   }
 }
-
+*/
 
 /*
 import 'package:flutter/material.dart';

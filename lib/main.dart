@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interface_number_3/screens/screens.dart';
+import 'package:interface_number_3/video_screen.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'courses',
         routes: {
-          'courses': (_) => VideoPlayerScreen(), // Use the appropriate key if needed
+          'courses': (_) => LocalVideoPlayer(), // Use the appropriate key if needed
 
 
         }
