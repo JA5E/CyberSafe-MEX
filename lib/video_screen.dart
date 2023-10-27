@@ -1,70 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class LocalVideoPlayer extends StatefulWidget {
-  @override
-  _LocalVideoPlayerState createState() => _LocalVideoPlayerState();
-}
-
-class _LocalVideoPlayerState extends State<LocalVideoPlayer> {
-  late VideoPlayerController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    // Use the asset path to load the video file
-   _controller = VideoPlayerController.asset('media/1.mp4')
-
-      ..initialize().then((_) {
-        // Ensure the first frame is shown when initialized
-        setState(() {});
-      });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Local Video Player'),
-      ),
-      body: Center(
-        child: _controller.value.isInitialized
-            ? AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: VideoPlayer(_controller),
-              )
-            : CircularProgressIndicator(), // Display a loading indicator while initializing
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            if (_controller.value.isPlaying) {
-              _controller.pause();
-            } else {
-              _controller.play();
-            }
-          });
-        },
-        child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-}
-
-
-/*
-import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
-
 class VideoPlayerWidget extends StatefulWidget {
   const VideoPlayerWidget({super.key});
 
@@ -81,8 +17,8 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
     super.initState();
 
     // Initialize the controller and store the Future for later use.
-    _videoPlayerController = VideoPlayerController.asset(
-      'media/Session 1_ Introduction to Cyber Security.mp4',
+    _videoPlayerController = VideoPlayerController.network(
+      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
     )..initialize().then((_) {
       setState(() {});
     });
@@ -127,7 +63,7 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
     _videoPlayerController.dispose();
   }
 }
-*/
+
 /*import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 

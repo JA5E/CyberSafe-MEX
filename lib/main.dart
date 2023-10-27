@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'courses',
         routes: {
-          'courses': (_) => LocalVideoPlayer(), // Use the appropriate key if needed
+          'courses': (_) => VideoPlayerWidget(), // Use the appropriate key if needed
 
 
         }
