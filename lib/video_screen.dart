@@ -14,7 +14,7 @@ class _LocalVideoPlayerState extends State<LocalVideoPlayer> {
     super.initState();
 
     // Use the asset path to load the video file
-   _controller = VideoPlayerController.asset('media/Session 1_ Introduction to Cyber Security.mp4')
+   _controller = VideoPlayerController.asset('media/1.mp4')
 
       ..initialize().then((_) {
         // Ensure the first frame is shown when initialized
