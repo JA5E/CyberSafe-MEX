@@ -27,7 +27,7 @@ class TabBarDemoState extends State<TabBarDemo> {
 
   Future<void> loadButtonDataFromJson() async {
     try {
-      final String jsonData = await rootBundle.loadString('../data.json');
+      final String jsonData = await rootBundle.loadString('lib/data.json');
       final List<dynamic> jsonDataList = json.decode(jsonData);
       final data = jsonDataList.map((item) {
         return ButtonData(item['text'], item['action']);
@@ -40,7 +40,8 @@ class TabBarDemoState extends State<TabBarDemo> {
     }
   }
 
-  ElevatedButton buildElevatedButton(String buttonText, VoidCallback onPressed) {
+  ElevatedButton buildElevatedButton(
+      String buttonText, VoidCallback onPressed) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
@@ -86,6 +87,7 @@ class TabBarDemoState extends State<TabBarDemo> {
                     padding: const EdgeInsets.all(7.0),
                     child: buildElevatedButton(data.text, () {
                       // Realiza la acción correspondiente (data.action)
+                      Navigator.pushNamed(context, 'video');
                     }),
                   );
                 }).toList(),

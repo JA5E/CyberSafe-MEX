@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'dart:async';
+import 'dart:convert';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +31,7 @@ class _JsonReaderAppState extends State<JsonReaderApp> {
 
   Future<void> loadJsonData() async {
     try {
-      final String jsonData = await rootBundle.loadString('../data.json');
+      final String jsonData = await rootBundle.loadString('lib/data.json');
 
       final List<dynamic> jsonDataList = json.decode(jsonData);
 
