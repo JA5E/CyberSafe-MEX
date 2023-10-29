@@ -5,3 +5,11 @@ class ButtonData {
   ButtonData(this.text, this.action);
   
 }
+
+
+class VideoArguments {
+  final String videoUrl;
+  final String videoTitle;
+
+  VideoArguments(this.videoUrl, this.videoTitle);
+}

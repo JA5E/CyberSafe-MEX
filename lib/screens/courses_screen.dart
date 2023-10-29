@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import '../models/models.dart';
+import '../widgets/button_widget.dart';
 class CoursesScreen extends StatefulWidget {
   const CoursesScreen({Key? key}) : super(key: key);
 
@@ -33,33 +34,7 @@ class CoursesScreenState extends State<CoursesScreen> {
     }
   }
 
-  ElevatedButton buildElevatedButton(
-      String buttonText, VoidCallback onPressed) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white,
-        backgroundColor: const Color(0xFF4548E6),
-        minimumSize: const Size(0, 60),
-      ),
-      child: FractionallySizedBox(
-        widthFactor: 0.9,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 5, bottom: 5),
-          child: Center(
-            child: Align(
-              alignment: const Alignment(0, 0),
-              child: 
-              Text(
-                buttonText,
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -80,9 +55,14 @@ class CoursesScreenState extends State<CoursesScreen> {
                   children: buttonData.map((data) {
                     return Padding(
                       padding: const EdgeInsets.all(7.0),
-                      child: buildElevatedButton(data.text, () {
+                      child: MyButtonBuilder.buildElevatedButton(data.text, () {
                         // Realiza la acción correspondiente (data.action)
-                        Navigator.pushNamed(context, 'video', arguments: data.action);
+                        Map<String, dynamic> args = {
+                          'videoUrl': data.action,
+                          'title': data.text,
+                        };
+
+                        Navigator.pushNamed(context, 'video', arguments: args);
                       }),
                     );
                   }).toList(),
