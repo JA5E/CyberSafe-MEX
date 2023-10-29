@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:interface_number_3/screens/screens.dart';
-import 'package:interface_number_3/video_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,12 +11,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        initialRoute: 'courses',
-        routes: {
-          'courses': (_) => TabBarDemo(),
-          'video': (_) => VideoDemo(),
-          'quiz': (_) => MyApp(),
-        });
+      debugShowCheckedModeBanner: false,
+      initialRoute: 'courses',
+      routes: {
+        'courses': (_) => const CoursesScreen(),
+        'video': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as String;
+          return YoutubeScreen(url_video: args);
+        },
+        'quiz': (_) => MyApp(),
+      },
+    );
   }
 }

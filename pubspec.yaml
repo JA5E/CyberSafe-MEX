@@ -39,6 +39,7 @@ dependencies:
   http: ^1.1.0
   chewie: ^1.7.1
   video_controls: ^1.0.0
+  youtube_player_flutter: ^8.1.2
 
 
 dev_dependencies:

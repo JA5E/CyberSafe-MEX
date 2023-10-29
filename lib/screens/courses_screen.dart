@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
-
-class TabBarDemo extends StatefulWidget {
-  const TabBarDemo({Key? key}) : super(key: key);
+import '../models/models.dart';
+class CoursesScreen extends StatefulWidget {
+  const CoursesScreen({Key? key}) : super(key: key);
 
   @override
-  TabBarDemoState createState() => TabBarDemoState();
+  CoursesScreenState createState() => CoursesScreenState();
 }
 
-class ButtonData {
-  final String text;
-  final String action;
-
-  ButtonData(this.text, this.action);
-}
-
-class TabBarDemoState extends State<TabBarDemo> {
+class CoursesScreenState extends State<CoursesScreen> {
   List<ButtonData> buttonData = [];
 
   @override
@@ -46,17 +39,18 @@ class TabBarDemoState extends State<TabBarDemo> {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
-        backgroundColor: const Color.fromARGB(255, 69, 72, 230),
-        minimumSize: const Size(0, 65),
+        backgroundColor: const Color(0xFF4548E6),
+        minimumSize: const Size(0, 60),
       ),
       child: FractionallySizedBox(
         widthFactor: 0.9,
         child: Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 5, bottom: 5),
           child: Center(
             child: Align(
               alignment: const Alignment(0, 0),
-              child: Text(
+              child: 
+              Text(
                 buttonText,
                 textAlign: TextAlign.center,
               ),
@@ -75,22 +69,24 @@ class TabBarDemoState extends State<TabBarDemo> {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 69, 72, 230),
+            backgroundColor: const Color(0xFF4548E6),
             title: const Text('CyberSafe MX'),
           ),
           body: TabBarView(
             children: [
               // Primer tab
-              Column(
-                children: buttonData.map((data) {
-                  return Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton(data.text, () {
-                      // Realiza la acción correspondiente (data.action)
-                      Navigator.pushNamed(context, 'video');
-                    }),
-                  );
-                }).toList(),
+              SingleChildScrollView(
+                child: Column(
+                  children: buttonData.map((data) {
+                    return Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: buildElevatedButton(data.text, () {
+                        // Realiza la acción correspondiente (data.action)
+                        Navigator.pushNamed(context, 'video', arguments: data.action);
+                      }),
+                    );
+                  }).toList(),
+                ),
               ),
               // Otros tabs
               const Icon(Icons.newspaper),
@@ -99,7 +95,7 @@ class TabBarDemoState extends State<TabBarDemo> {
             ],
           ),
           bottomNavigationBar: Container(
-            color: const Color.fromARGB(255, 69, 72, 230),
+            color: const Color(0xFF4548E6),
             child: const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.smart_display)),

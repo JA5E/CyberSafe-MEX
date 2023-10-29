@@ -1,11 +1,11 @@
 [
-    {"text":"Introducción al Curso de Seguridad Cibernética" ,"action":"action1"},
-    {"text":"Escenario de Phishing" ,"action":"action1"},
-    {"text":"Estafas Online" ,"action":"action1"},
-    {"text":"Identidad Personal" ,"action":"action1"},
-    {"text":"Importancia de contraseñas fuertes" ,"action":"action1"},
-    {"text":"Actualizacion regular del software" ,"action":"action1"},
-    {"text":"Medidas adicionales de seguridad" ,"action":"action1"}
+    {"text":"Introducción al Curso de Seguridad Cibernética" ,"action":"Session_1_Introduction.mp4"},
+    {"text":"Escenario de Phishing" ,"action":"Session_2_ hishing Scenario.mp4"},
+    {"text":"Estafas Online" ,"action":"Session_3_Online_Scams.mp4"},
+    {"text":"Identidad Personal" ,"action":"Session_4_Personal_Identity_Protection.mp4"},
+    {"text":"Importancia de contraseñas fuertes" ,"action":"Session_5_Importance_of_Strong_Passwords.mp4"},
+    {"text":"Actualizacion regular del software" ,"action":"Session_6_Regular_Software Updates.mp4"},
+    {"text":"Medidas adicionales de seguridad" ,"action":"Session_7_Additional_Cyber_Security_Measures.mp4"}
 
     
 
