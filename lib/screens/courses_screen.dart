@@ -61,7 +61,6 @@ class CoursesScreenState extends State<CoursesScreen> {
                           'videoUrl': data.action,
                           'title': data.text,
                         };
-
                         Navigator.pushNamed(context, 'video', arguments: args);
                       }),
                     );

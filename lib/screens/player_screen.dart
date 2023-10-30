@@ -1,4 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:interface_number_3/models/models.dart';
+import 'package:interface_number_3/screens/quiz_screen.dart';
 import 'package:video_player/video_player.dart';
 import '../widgets/button_widget.dart';
 
@@ -14,9 +19,15 @@ class YoutubeScreen extends StatefulWidget {
 
 class _YoutubeScreenState extends State<YoutubeScreen> {
   late VideoPlayerController _controller;
+  List<Question> quizQuestions = [];
+  Map<int, int> selectedAnswers = {};
 
   @override
   void initState() {
+
+    loadQuizDataFromJson(widget.title);
+
+
     super.initState();
     _controller = VideoPlayerController.networkUrl(
         Uri.parse('lib/media/${widget.urlVideo}'))
@@ -28,6 +39,36 @@ class _YoutubeScreenState extends State<YoutubeScreen> {
     _controller.play();
   }
 
+Future<void> loadQuizDataFromJson(String? session) async {
+    try {
+      final String jsonData = await rootBundle.loadString('lib/quizzes.json');
+      final List<dynamic> jsonDataList = json.decode(jsonData);
+      print(jsonDataList);
+      // Find the matching session
+      var matchingSessionData = jsonDataList.firstWhere(
+        (sessionData) => sessionData['session'] == session,
+        orElse: () => null, // Return null if no matching session is found
+      );
+
+      if (matchingSessionData != null) {
+        final List<dynamic> questionsData = matchingSessionData['questions'];
+        quizQuestions = questionsData.map((questionData) {
+          final String question = questionData['question'];
+          final List<String> options =
+              List<String>.from(questionData['options']);
+          final dynamic correctAnswer = questionData['correctAnswer'];
+          return Question(question, options, correctAnswer);
+        }).toList();
+      } else {
+        print(widget.title);
+        print('Quiz session not found');
+      }
+    } catch (error) {
+      print('Error al cargar el JSON: $error');
+    }
+  }
+
+
   @override
   void dispose() {
     _controller.dispose();
@@ -38,7 +79,8 @@ class _YoutubeScreenState extends State<YoutubeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(widget.title), backgroundColor: const Color(0xFF4548E6)),
+          title: Text(widget.title), backgroundColor: const Color(0xFF4548E6)
+      ),
       body: ListView(children: [
         if (_controller.value.isInitialized)
           AspectRatio(
@@ -71,6 +113,7 @@ class _YoutubeScreenState extends State<YoutubeScreen> {
             ),
           ],
         ),
+        /*
         Column(
           children: [
             ElevatedButton(
@@ -81,11 +124,28 @@ class _YoutubeScreenState extends State<YoutubeScreen> {
               ),
               onPressed: () {
                 // Add your button's onPressed logic here
+                Navigator.pushNamed(context, 'quiz',
+                    arguments: {'quizSession': widget.title});
               },
               child: const Text('Tomar Quiz'),
             ),
             // Add more widgets here
           ],
+        ),
+        */
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              ...quizQuestions.asMap().entries.map((entry) {
+                final index = entry.key;
+                final question = entry.value;
+                return Padding(
+                  padding: const EdgeInsets.all(7.0),
+                  child: QuizAppState().buildQuestionWidget(question, index)
+                );
+              }).toList(),
+            ],
+          ),
         )
       ]),
     );

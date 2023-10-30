@@ -1,0 +1,617 @@
+[
+  {
+    "session": "Escenario de Phishing",
+    "questions": [
+      {
+        "question": "¿Qué describe mejor al phishing?",
+        "options": [
+          "Implica que actores maliciosos se hacen pasar por entidades de confianza para engañar a las personas",
+          "Son empresas que te engañan para obtener tus datos vía Email.",
+          "Una forma legítima de enviar correos electrónicos masivos a contactos comerciales."
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Cuáles son los peligros del phishing?",
+        "options": [
+          "pérdida financiera",
+          "robo de identidad",
+          "filtraciones de datos",
+          "Todas las anteriores"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "¿Qué consejo es más efectivo para evitar caer en una estafa de phishing?",
+        "options": [
+          "Compartir contraseñas regularmente para mayor seguridad.",
+          "Abrir cualquier correo electrónico que parezca importante sin verificar su origen.",
+          "Hacer clic en enlaces de correo electrónico sin cuestionar su autenticidad.",
+          "Verificar siempre la autenticidad de los correos electrónicos y enlaces antes de hacer clic o proporcionar información sensible"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "Son características de un email de phishing:",
+        "options": [
+          "Saludos Genéricos y Solicitudes de Información Sensible",
+          "Logotipo de las marca",
+          "Dirección de correo correcta",
+          "Nombre del remitente"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Es una forma de protegerse del phishing:",
+        "options": [
+          "Verifica la dirección de correo recibido",
+          "Cerrar mi cuenta de email",
+          "Poner mi correo en páginas que regalan dinero"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Por qué es importante no hacer clic en enlaces sospechosos en correos electrónicos?",
+        "options": [
+          "Hacer clic en enlaces sospechosos suele llevar a descuentos y ofertas especiales.",
+          "Hacer clic en enlaces sospechosos siempre es seguro, ya que los navegadores web modernos protegen contra cualquier amenaza.",
+          "Hacer clic en enlaces sospechosos puede llevar a sitios web falsos o maliciosos diseñados para robar información personal o infectar un dispositivo con malware."
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "¿Cuál es uno de los métodos más comunes utilizados por los atacantes en ataques de phishing?",
+        "options": [
+          "Suplantación de identidad de entidades de confianza",
+          "Utilización de emojis en correos electrónicos para hacer que los mensajes parezcan más amigables.",
+          "Inclusión de memes en mensajes para distraer a los destinatarios."
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Qué se debe hacer si se recibe un correo electrónico sospechoso que parece ser de una entidad de confianza?",
+        "options": [
+          "No hacer clic en ningún enlace ni proporcionar información sensible",
+          "Hacer clic en el enlace para ver de qué se trata y luego decidir si es seguro o no.",
+          "Responder al correo electrónico con toda la información requerida."
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Qué tipo de información personal suelen buscar los atacantes en ataques de phishing?",
+        "options": [
+          "Contraseñas, números de tarjeta de crédito, información bancaria",
+          "Nombres de las mascotas de los destinatarios.",
+          "Técnicas de pesca"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Cuál es una táctica comúnmente utilizada por los atacantes en el phishing para engañar a las personas?",
+        "options": [
+          "Utilizar un lenguaje y estilo de escritura muy formal en los correos electrónicos.",
+          "Crear correos electrónicos y sitios web que se parecen mucho a los de entidades legítimas",
+          "Enviar correos electrónicos desde direcciones de remitente obviamente falsas."
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "session": "Estafas Online",
+    "questions": [
+      {
+        "question": "¿Qué describe mejor una estafa en internet?",
+        "options": [
+          "Un algoritmo matemático utilizado para cifrar mensajes secretos en la web oscura.",
+          "Son fraudes en línea abarcan una amplia gama de engaños perpetrados en el ciberespacio con el objetivo de estafar a las personas.",
+          "Una estrategia de marketing viral utilizada por empresas poco éticas."
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "¿Cómo puedes detectar una estafa en internet?",
+        "options": [
+          "Ofertas Demasiadas Buenas para Ser Ciertas",
+          "Solicitudes de Dinero o Información Personal",
+          "Perfiles Falsos o Anónimos",
+          "Todas las anteriores"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "¿En qué tipo de estafa en línea las víctimas pueden recibir correos electrónicos o mensajes afirmando que han ganado una lotería ficticia?",
+        "options": [
+          "Estafas de lotería.",
+          "Estafas de jardinería en línea.",
+          "Estafas de reparto de pizzas virtuales."
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Qué hacen los estafadores en las estafas románticas en línea?",
+        "options": [
+          "Venden productos de belleza en línea.",
+          "Crean perfiles falsos en sitios de citas o redes sociales y establecen relaciones sentimentales con las víctimas para luego pedir dinero.",
+          "Ofrecen consejos de cocina."
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "¿Por qué los estafadores a menudo presionan a las víctimas para tomar decisiones rápidas?",
+        "options": [
+          "Para que las víctimas envíen dinero de inmediato o proporcionen información personal sin pensar.",
+          "Para organizar reuniones en línea.",
+          "Para brindar tiempo a las víctimas para reflexionar sobre la situación."
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Cuál de las siguientes acciones puede ayudar a protegerse de las estafas en línea?",
+        "options": [
+          "Compartir información personal en línea de manera indiscriminada.",
+          "Usar la misma contraseña para todas las cuentas en línea.",
+          "Mantener la privacidad limitando la cantidad de datos personales compartidos en línea."
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "¿Qué deben hacer las víctimas si creen que han sido estafadas en línea?",
+        "options": [
+          "Ignorar la estafa y esperar que se resuelva por sí sola.",
+          "Denunciar la estafa a las autoridades y a las plataformas en las que se llevó a cabo.",
+          "Enviar más dinero a los estafadores para intentar recuperar lo perdido."
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "¿Por qué las estafas en línea son un problema persistente?",
+        "options": [
+          "Porque los estafadores aprovechan la conectividad y la relativa anonimidad de Internet para engañar a las personas.",
+          "Debido a la falta de interés en las ofertas en línea.",
+          "Porque las estafas en línea solo afectan a empresas, no a personas individuales."
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "¿Por qué las estafas en línea pueden ser particularmente crueles en comparación con otras estafas?",
+        "options": [
+          "Porque explotan las emociones de las víctimas al establecer relaciones sentimentales falsas.",
+          "Porque siempre devuelven el dinero robado después de cometer la estafa.",
+          "Porque las estafas en línea nunca involucran emociones personales."
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "session": "Identidad Personal",
+    "questions": [
+      {
+          "question": "¿Qué tipo de información se considera datos personales?",
+          "options": [
+              "Fotos de vacaciones en familia.",
+              "Números de seguridad social, contraseñas, datos bancarios y otra información privada",
+              "Nombres de restaurantes favoritos."
+          ],
+          "correctAnswer": 1
+      },
+      {
+          "question": "¿Por qué es crítico proteger los datos personales en la era digital?",
+          "options": [
+              "Para prevenir el robo de identidad y otros delitos financieros.",
+              "Para mantener la privacidad de las celebridades en línea.",
+              "Para evitar que los amigos y familiares accedan a información personal."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué riesgo representa el acceso no autorizado a datos bancarios o tarjetas de crédito?",
+          "options": [
+              "Beneficios financieros inesperados.",
+              "Aumento de la calificación crediticia.",
+              "Pérdidas financieras significativas."
+          ],
+          "correctAnswer": 2
+      },
+      {
+          "question": "¿Por qué es importante configurar ajustes de privacidad en línea?",
+          "options": [
+              "Para controlar quién puede ver tu información.",
+              "Para aumentar la visibilidad en línea.",
+              "Para compartir información con desconocidos."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué es la autenticación de dos factores (2FA)?",
+          "options": [
+              "Una contraseña que se comparte públicamente.",
+              "Un método adicional de seguridad que requiere una segunda forma de verificación.",
+              "Un método para evitar la autenticación."
+          ],
+          "correctAnswer": 1
+      },
+      {
+          "question": "¿Por qué se debe evitar compartir la ubicación en tiempo real en redes sociales?",
+          "options": [
+              "Puede poner en riesgo tu seguridad.",
+              "Para mantener a tus amigos informados sobre tus actividades.",
+              "Para ganar premios en línea."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante educar a los niños sobre los riesgos en línea?",
+          "options": [
+              "Para que pasen más tiempo en línea.",
+              "Para que compartan información personal en línea sin restricciones.",
+              "Para que comprendan la importancia de no compartir información personal y practicar el comportamiento en línea seguro."
+          ],
+          "correctAnswer": 2
+      },
+      {
+          "question": "¿Qué se debe hacer si recibes un mensaje de texto o correo electrónico sospechoso?",
+          "options": [
+              "Hacer clic en enlaces sin dudar.",
+              "Descargar todos los archivos adjuntos sin verificar.",
+              "Ninguna de las anteriores"
+          ],
+          "correctAnswer": 2
+      },
+      {
+          "question": "¿Qué se recomienda hacer si crees que has sido víctima de robo de identidad?",
+          "options": [
+              "Ignorar la situación y esperar a que se resuelva por sí sola.",
+              "Informar a tus instituciones financieras y a las autoridades.",
+              "No tomar ninguna acción."
+          ],
+          "correctAnswer": 1
+      },
+      {
+          "question": "¿Por qué es importante mantener registros de las comunicaciones relacionadas con el robo de identidad?",
+          "options": [
+              "Para ganar espacio en tu correo electrónico.",
+              "Para aumentar la cantidad de correos electrónicos.",
+              "Para tener documentación importante en caso de necesitar pruebas."
+          ],
+          "correctAnswer": 2
+      }
+  ]
+  
+  },
+
+
+
+
+  {
+    "session": "Importancia de contraseñas fuertes",
+    "questions": [
+      {
+          "question": "¿Qué característica hace que una contraseña sea más segura?",
+          "options": [
+              "Longitud de al menos 12 caracteres.",
+              "Utilizar solo letras minúsculas.",
+              "Incluir información personal en la contraseña."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante evitar contraseñas basadas en palabras comunes o datos personales?",
+          "options": [
+              "Son fácilmente adivinadas.",
+              "Son difíciles de recordar.",
+              "Son recomendadas para la seguridad."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Cuál es una práctica recomendada al crear contraseñas sólidas?",
+          "options": [
+              "Utilizar frases de contraseña.",
+              "Usar nombres de familiares en la contraseña.",
+              "Cambiar la contraseña cada semana."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué se recomienda evitar información personal en las contraseñas?",
+          "options": [
+              "Para prevenir que otros adivinen fácilmente la contraseña.",
+              "Para personalizar la contraseña.",
+              "Para recordar la contraseña más fácilmente."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Cuál es un componente esencial de la creación de contraseñas sólidas?",
+          "options": [
+              "No utilizar la misma contraseña para múltiples cuentas.",
+              "Cambiar la contraseña mensualmente.",
+              "Compartir contraseñas con amigos."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Cuál de las siguientes NO es una forma común de autenticación de dos factores?",
+          "options": [
+              "Una dirección de correo electrónico adicional.",
+              "Un código de verificación en tiempo real.",
+              "Una huella dactilar."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué ventaja ofrece un gestor de contraseñas en la generación de contraseñas?",
+          "options": [
+              "Puede crear contraseñas fuertes y aleatorias para cada cuenta.",
+              "Puede almacenar contraseñas en texto sin formato.",
+              "No es útil para la creación de contraseñas."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante que los gestores de contraseñas almacenen contraseñas de manera segura y cifrada?",
+          "options": [
+              "Para que sean inaccesibles para los atacantes.",
+              "Para que sea más fácil para los atacantes acceder a las contraseñas.",
+              "Para compartirlas públicamente."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué función puede realizar un gestor de contraseñas para facilitar el acceso seguro?",
+          "options": [
+              "Autocompletar contraseñas en sitios web y aplicaciones.",
+              "Almacenar contraseñas en papel.",
+              "Enviar contraseñas por correo electrónico."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué se recomienda utilizar un recordatorio para cambiar las contraseñas?",
+          "options": [
+              "Para recordar cuándo es el momento de actualizar las contraseñas.",
+              "Para olvidar completamente las contraseñas.",
+              "Para evitar cambiar las contraseñas."
+          ],
+          "correctAnswer": 0
+      }
+  ]
+  
+  },
+
+
+
+  {
+    "session": "Actualizacion regular del software",
+    "questions": [
+      {
+          "question": "¿Por qué es importante mantener actualizado el software?",
+          "options": [
+              "Para garantizar la seguridad de tus dispositivos y datos.",
+              "Para aumentar el rendimiento del software.",
+              "Para ahorrar dinero en actualizaciones."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Cuáles son los dos tipos principales de actualizaciones de software?",
+          "options": [
+              "Actualizaciones automáticas y manuales.",
+              "Actualizaciones de alto riesgo y bajo riesgo.",
+              "Actualizaciones críticas y opcionales."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Cuál es la principal diferencia entre las actualizaciones automáticas y las manuales?",
+          "options": [
+              "Las actualizaciones automáticas se instalan sin requerir la intervención del usuario, mientras que las actualizaciones manuales requieren la intervención del usuario.",
+              "Las actualizaciones automáticas son opcionales, mientras que las actualizaciones manuales son obligatorias.",
+              "Las actualizaciones automáticas solo son para el sistema operativo, y las actualizaciones manuales son solo para aplicaciones."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué elementos necesitas mantener actualizados para mantener un entorno seguro?",
+          "options": [
+              "Sistema operativo, navegadores web, aplicaciones y programas.",
+              "Solo el sistema operativo.",
+              "Solo las aplicaciones de seguridad."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué son los parches de seguridad?",
+          "options": [
+              "Actualizaciones específicas destinadas a corregir vulnerabilidades y agujeros de seguridad en el software existente.",
+              "Actualizaciones generales del sistema operativo.",
+              "Actualizaciones de funciones adicionales."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué tipo de problemas se resuelven mediante parches de seguridad de navegadores?",
+          "options": [
+              "Problemas de seguridad que podrían permitir la ejecución de código malicioso.",
+              "Problemas de rendimiento de navegadores.",
+              "Problemas de compatibilidad de navegadores."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué son esenciales los parches de seguridad?",
+          "options": [
+              "Para cerrar vulnerabilidades y evitar ataques cibernéticos.",
+              "Para mejorar el rendimiento del software.",
+              "Para agregar nuevas funciones a las aplicaciones."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué deben hacer los desarrolladores de software en respuesta a amenazas conocidas o nuevas vulnerabilidades?",
+          "options": [
+              "Lanzar parches de seguridad.",
+              "Ignorar las amenazas y vulnerabilidades.",
+              "Desarrollar nuevas versiones del software."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante que tanto el sistema operativo como las aplicaciones estén siempre actualizados?",
+          "options": [
+              "Para protegerse contra amenazas en constante evolución.",
+              "Para acelerar el rendimiento de los dispositivos.",
+              "Para reducir la cantidad de espacio de almacenamiento utilizado."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Cuál es el objetivo principal de los parches de seguridad?",
+          "options": [
+              "Cerrar brechas de seguridad y evitar ataques.",
+              "Agregar nuevas características a las aplicaciones.",
+              "Optimizar el rendimiento del software existente."
+          ],
+          "correctAnswer": 0
+      }
+  ]
+  
+  },
+
+
+
+
+
+  {
+    "session": "Medidas adicionales de seguridad",
+    "questions": [
+      {
+          "question": "¿Cuál es la función principal de un firewall?",
+          "options": [
+              "Actuar como una barrera contra amenazas externas y filtrar tráfico no autorizado.",
+              "Mejorar la velocidad de la conexión a Internet.",
+              "Eliminar el malware de tu dispositivo."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué tipo de amenazas se dirigen comúnmente con el software antivirus?",
+          "options": [
+              "Malware, incluyendo virus, gusanos, troyanos y spyware.",
+              "Correo no deseado (spam).",
+              "Vulnerabilidades del sistema operativo."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué proporciona el software antivirus además de escanear y eliminar malware?",
+          "options": [
+              "Protección en tiempo real al identificar y detener amenazas en el acto.",
+              "Optimización del rendimiento del sistema.",
+              "Acceso a Internet más rápido."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué indicador visual en la barra de direcciones de un navegador sugiere una conexión segura mediante HTTPS?",
+          "options": [
+              "Un icono de candado.",
+              "Un icono de impresora.",
+              "Un icono de carrito de compras."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué se deben evitar las descargas de sitios de torrents o fuentes no verificadas?",
+          "options": [
+              "Porque son especialmente riesgosas y pueden contener malware.",
+              "Porque son la única fuente segura para obtener software.",
+              "Porque ofrecen descargas más rápidas que otras fuentes."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué medidas de seguridad se pueden aplicar a dispositivos móviles?",
+          "options": [
+              "Actualizar el sistema operativo y habilitar el bloqueo de pantalla.",
+              "Apagar los dispositivos móviles cuando no se usan.",
+              "Enviar mensajes de texto seguros."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante descargar aplicaciones sólo desde fuentes confiables, como tiendas de aplicaciones oficiales?",
+          "options": [
+              "Para reducir el riesgo de instalar aplicaciones maliciosas.",
+              "Porque las aplicaciones de fuentes no verificadas son gratuitas.",
+              "Porque las aplicaciones de fuentes no verificadas funcionan mejor."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué papel desempeña el cifrado en la protección de la privacidad en línea?",
+          "options": [
+              "El cifrado protege tus datos sensibles y las conexiones mediante HTTPS.",
+              "El cifrado acelera la velocidad de navegación en línea.",
+              "El cifrado protege contra las descargas de malware."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante verificar la identidad antes de compartir información sensible en línea?",
+          "options": [
+              "Para evitar la exposición de información a posibles estafadores.",
+              "Para recibir premios y regalos en línea.",
+              "Para agilizar la navegación en Internet."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué debes hacer si recibes un correo electrónico no solicitado con un enlace sospechoso?",
+          "options": [
+              "No hagas clic en el enlace ni descargues archivos adjuntos.",
+              "Haz clic en el enlace sin preocupaciones.",
+              "Descarga archivos adjuntos sin abrirlos."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Por qué es importante educarse y aumentar la conciencia sobre la ingeniería social?",
+          "options": [
+              "Para reconocer y evitar tácticas de estafadores y protegerse contra ataques.",
+              "Para ganar premios y regalos en línea.",
+              "Para navegar por Internet de manera más eficiente."
+          ],
+          "correctAnswer": 0
+      },
+      {
+          "question": "¿Qué medidas adicionales de seguridad son esenciales para la navegación segura en línea?",
+          "options": [
+              "Utilizar conexiones seguras (HTTPS), evitar correos electrónicos sospechosos y cifrar datos sensibles.",
+              "Compartir datos personales en línea con amigos y familiares.",
+              "Descargar todos los archivos adjuntos de correos electrónicos."
+          ],
+          "correctAnswer": 0
+      }
+  ]
+  
+  }
+
+
+
+
+]

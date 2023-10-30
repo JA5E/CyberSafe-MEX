@@ -6,10 +6,18 @@ class ButtonData {
   
 }
 
-
 class VideoArguments {
   final String videoUrl;
   final String videoTitle;
 
   VideoArguments(this.videoUrl, this.videoTitle);
+}
+
+
+class Question {
+  final String question;
+  final List<String> options;
+  final dynamic correctAnswer;
+
+  Question(this.question, this.options, this.correctAnswer);
 }
