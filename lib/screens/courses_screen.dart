@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:interface_number_3/models/news.dart';
+import 'package:interface_number_3/widgets/newsCard_widget.dart';
 import 'dart:convert';
+import 'package:http/http.dart' as http;
 import '../models/models.dart';
 import '../widgets/button_widget.dart';
+
 class CoursesScreen extends StatefulWidget {
   const CoursesScreen({Key? key}) : super(key: key);
 
@@ -19,10 +23,22 @@ class CoursesScreenState extends State<CoursesScreen> {
     super.initState();
   }
 
+  Future<List<News>> jsonNews = getNews();
+
+  static Future<List<News>> getNews() async {
+    const url =
+        "https://newsapi.org/v2/everything?q=Cybersecurity&language=es&apiKey=22ec77bb32294fe19bc6116439061998";
+    final response = await http.get(Uri.parse(url));
+    final body = jsonDecode(response.body);
+    return (body['articles'] as List<dynamic>)
+        .map<News>((item) => News.fromJson(item))
+        .toList();
+  }
+
   Future<void> loadButtonDataFromJson() async {
     try {
       final String jsonData = await rootBundle.loadString('lib/data.json');
-      final List<dynamic> jsonDataList = json.decode(jsonData);
+      final List<dynamic> jsonDataList = jsonDecode(jsonData);
       final data = jsonDataList.map((item) {
         return ButtonData(item['text'], item['action']);
       }).toList();
@@ -33,8 +49,6 @@ class CoursesScreenState extends State<CoursesScreen> {
       print('Error al cargar el JSON: $error');
     }
   }
-
- 
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +82,13 @@ class CoursesScreenState extends State<CoursesScreen> {
                 ),
               ),
               // Otros tabs
-              const Icon(Icons.newspaper),
+              Column(
+                children: [
+                  NewsListView(
+                    newsListFuture: jsonNews,
+                  ),
+                ],
+              ),
               const Icon(Icons.feedback),
               const Icon(Icons.account_box),
             ],
@@ -89,128 +109,3 @@ class CoursesScreenState extends State<CoursesScreen> {
     );
   }
 }
-
-
-
-/*
-class TabBarDemo extends StatelessWidget {
-  const TabBarDemo({super.key});
-
-  ElevatedButton buildElevatedButton(
-      String buttonText, VoidCallback onPressed) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white,
-        backgroundColor:
-            const Color.fromARGB(255, 69, 72, 230), // Color del texto del botón
-        minimumSize: const Size(0, 65), // Altura de 65
-      ),
-      child: FractionallySizedBox(
-        widthFactor: 0.9, // Ancho al 90%
-        child: Padding(
-          padding: const EdgeInsets.only(top: 10), // Relleno superior de 10
-          child: Center(
-            child: Align(
-              alignment:
-                  const Alignment(0, 0), // Centrar vertical y horizontalmente
-              child: Text(
-                buttonText,
-                textAlign: TextAlign.center, // Alineación del texto al centro
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: DefaultTabController(
-        length: 4,
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 69, 72, 230),
-            title: const Text('CyberSafe MX'),
-          ),
-          body: TabBarView(
-            children: [
-              // Primer tab
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton(
-                        'Introducción al Curso de Seguridad Cibernética', () {
-                      // Acción del segundo botón
-                    }),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton('Escenario de Phishing', () {
-                      // Acción del segundo botón
-                    }),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton('Estafas Online', () {
-                      // Acción del tercer botón
-                    }),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton(
-                        'Proteccion de Identidad Personal', () {
-                      // Acción del cuarto botón
-                    }),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton(
-                        'Importancia de contraseñas fuertes', () {
-                      // Acción del segundo botón
-                    }),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton(
-                        'Actualizacion regular del software', () {
-                      // Acción del segundo botón
-                    }),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: buildElevatedButton(
-                        'Medidas adicionales de seguridad', () {
-                      // Acción del tercer botón
-                    }),
-                  ),
-                ],
-              ),
-
-              // Otros tabs
-              const Icon(Icons.newspaper),
-              const Icon(Icons.feedback),
-              const Icon(Icons.account_box),
-            ],
-          ),
-          bottomNavigationBar: Container(
-            color: const Color.fromARGB(255, 69, 72, 230),
-            child: const TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.smart_display)),
-                Tab(icon: Icon(Icons.newspaper)),
-                Tab(icon: Icon(Icons.feedback)),
-                Tab(icon: Icon(Icons.account_box)),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-*/
